@@ -19,6 +19,9 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
+      - name: Ejecutar test
+        run: node test
+
       - name: Ejecutar proyecto
         run: node index.js
       
