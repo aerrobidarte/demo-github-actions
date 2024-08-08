@@ -1,0 +1,24 @@
+name: Continuous-Integration
+
+on:
+  push:
+    branches: 
+      -master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bajar repo
+        uses: actions/checkout@v4.1.7
+
+      - name: Instalar NodeJs
+        uses:  actions/setup-node@v4.0.3
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar proyecto
+        run: node index.js
+      
