@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar test
-        run: node test
+        run: npm test
 
       - name: Ejecutar proyecto
         run: node index.js
